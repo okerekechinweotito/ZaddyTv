@@ -1,190 +1,181 @@
 /* elements trapped within their container */
 * {
-   max-width: 100%;
-   box-sizing: border-box;
-   margin: 0;
-   padding: 0;
+  max-width: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 /* global declaration canceling browser default styles */
 html,
 body {
-   height: 100vh;
-   padding: 0;
-   margin: 0;
-
+  height: 100vh;
+  padding: 0;
+  margin: 0;
 }
 
 body {
-   background-color: #ccc;
-   color: #333;
-   font-family: Arial, Helvetica, sans-serif;
+  background-color: #ccc;
+  color: #333;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 /* media queries */
-@media only screen and (min-width:500px) {
+@media only screen and (min-width: 500px) {
+  /* query for all headboxes when in desktop view */
+  .headboxes {
+    grid-row: span 7 !important;
+  }
 
-   /* query for all headboxes when in desktop view */
-   .headboxes {
-      grid-row: span 7 !important;
-   }
+  /* query for the margin of the first box with zaddy logo */
+  .logo {
+    margin-top: -30px !important;
+  }
 
-   /* query for the margin of the first box with zaddy logo */
-   .logo {
-      margin-top: -30px !important;
-   }
+  div:nth-child(2) {
+    grid-row: span 12 !important;
+  }
 
-   div:nth-child(2) {
-      grid-row: span 12 !important;
-   }
-
-   .headpic {
-      background-image: url(headpic2.jpg) !important;
-
-   }
-
-
+  .headpic {
+    background-image: url(headpic2.jpg) !important;
+  }
 }
 
 /* global styling of selected elements */
 li {
-   list-style: none;
-
+  list-style: none;
 }
 
 a {
-   text-decoration: none;
-   color: inherit;
+  text-decoration: none;
+  color: inherit;
 }
 
 em {
-   padding: 20px;
-   text-indent: 20px;
+  padding: 20px;
+  text-indent: 20px;
 }
-
 
 /* main container */
 main {
-   display: grid;
+  display: grid;
 }
 
 /* head container */
 .headcontainer {
-   display: grid;
-   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-   grid-auto-rows: 78px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-auto-rows: 78px;
 }
 
 /* menu bar container */
 .topnav {
-   grid-column: 1/-1;
+  grid-column: 1/-1;
 }
-
 
 /* top menu bar sub container */
 .topnav ul {
-   display: flex;
-   justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 /* top menu bar direct container */
 .topnav li {
-   background-color: #ddd;
-   padding: 1rem;
-   box-shadow: 5px 5px 5px;
+  background-color: #ddd;
+  padding: 1rem;
+  box-shadow: 5px 5px 5px;
 }
 
 .topnav li:hover {
-   background-color: #333;
-   color: #fff;
+  background-color: #333;
+  color: #fff;
 }
 
 /* Twitter logo at top menu bar */
 .twitter {
-   background-color: #ccc !important;
-   box-shadow: none !important;
+  background-color: #ccc !important;
+  box-shadow: none !important;
 }
-
-
 
 /* header picture */
 .headpic {
-   grid-column: 1/-1;
-   grid-row: 1/span 4;
-   background-image: url("https://i.ibb.co/S3ZN5fc/headpic2.jpg");
-   background-position: center;
-   background-size: cover;
-   color: #04010c;
-   text-align: center;
-   justify-content: end;
-   font-size: 3rem;
-
+  grid-column: 1/-1;
+  grid-row: 1 / span 4;
+  background-image: url("https://i.ibb.co/S3ZN5fc/headpic2.jpg");
+  background-position: center;
+  background-size: cover;
+  color: #04010c;
+  text-align: center;
+  justify-content: end;
+  font-size: 3rem;
 }
 
 /* logo picture */
 .logo {
-   width: 100%;
-   background-image: url("https://i.ibb.co/8PvHrr5/PSX-20200819-161543.jpg");
-   height: 10rem;
-   background-position: center;
-   background-size: cover;
-   margin-top: -50px;
+  width: 100%;
+  background-image: url("https://i.ibb.co/8PvHrr5/PSX-20200819-161543.jpg");
+  height: 10rem;
+  background-position: center;
+  background-size: cover;
+  margin-top: -50px;
 }
 
 /* Universal styling of boxes*/
 .headboxes {
-   grid-row: span 10;
-   grid-column: span 2;
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   background-color: #ddd;
-   justify-content: space-around;
-   margin: 28px;
-   box-shadow: 5px 5px 5px;
-   text-align: center;
+  grid-row: span 10;
+  grid-column: span 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ddd;
+  justify-content: space-around;
+  margin: 28px;
+  box-shadow: 5px 5px 5px;
+  text-align: center;
 }
 
 /* styling on first box with zaddy tv logo */
 div:nth-child(2) {
-   grid-row: span 15;
+  grid-row: span 15;
 }
 
 /* styling on last box with zaddy tv logo */
 div:nth-child(10) {
-   grid-row: span 2 !important;
+  grid-row: span 2 !important;
 }
 
-
 /* 1st element in each box; title of each box */
-.headboxes>:nth-child(1) {
-   font-weight: bold;
-   font-size: 2rem;
+.headboxes > :nth-child(1) {
+  font-weight: bold;
+  font-size: 2rem;
 }
 
 /* main content of each box;letters*/
-.headboxes>:nth-child(2) {
-   font-size: 1.3rem;
+.headboxes > :nth-child(2) {
+  font-size: 1.3rem;
 }
 
 /* button read more */
 .button {
-   background-color: #333;
-   color: #fff;
-   padding: 0.7rem;
+  background-color: #333;
+  color: #fff;
+  padding: 0.7rem;
 }
 
 /* button when hovered */
 .button:hover {
-   background-color: #03010c;
+  background-color: #03010c;
 }
 
 /* footer */
 footer {
-   grid-column: 1/-1;
-   background-color: #333;
-   color: #fff;
-   padding: 20px;
-   font-size: 1rem;
-   text-align: center;
+  grid-column: 1/-1;
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  font-size: 1rem;
+  text-align: center;
+}
+footer span {
+  color: #f1850a;
 }
